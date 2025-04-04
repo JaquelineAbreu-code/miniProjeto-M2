@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+body{
+    display: flexbox;
+    background-image: url('backgound-onepiece');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#layout1{
+display: flexbox;
+background-color: red;
+height: 200px;
+width: 100%;
+flex-direction: row;
+align-items: flex-start;
+}
+
 .ulList{
     font-family: 'Poppins', sans-serif;
     list-style: none;
@@ -27,7 +45,8 @@
     width: 25%;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: t
+    ransform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 10px;
     background-color: #fff;
 }
