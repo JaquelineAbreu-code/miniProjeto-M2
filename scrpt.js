@@ -17,6 +17,8 @@ const inputDescricao = document.getElementById("input-descricao");
 
 const btnSave = document.getElementById("btn-save");
 const btnList = document.getElementById("btn-list");
+const btnEdit = document.getElementById("btn-edit");
+const btnDelete = document.getElementById("btn-delet");
 
 // Associar uma função a uma interação do usuario
 btnSave.addEventListener("click", ()=> {
@@ -30,6 +32,17 @@ btnSave.addEventListener("click", ()=> {
   personagem.push(product)
   console.log("array: ", personagem)
 });
+
+btnList.addEventListener("click", ()=> {
+  console.log("input: " ,inputNome.value + ",",inputAnime.value +",", inputDescricao.value);
+  
+  // criando um novo objeto produto
+  const product = new product(inputNome.value,inputAnime.value, inputDescricao.value)
+  console.log("product obj: ",product);
+  // .push adicionar um novo elemento ao final do meu array
+  personagem.push(product)
+  console.log("array: ", personagem)
+ );
 
 // quando não sabemos a quantidade de uls que vamos criar 
 // criamos a tag ul pelo javascript
@@ -48,7 +61,7 @@ const listProduct = () => {
   }
 }
 
-btnList.addEventListener("click", listProduct);
+btnList.addEventListener("click", (listProduct));
 
 function createList(nome, anime, descricao){
   
