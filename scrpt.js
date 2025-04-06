@@ -32,17 +32,31 @@ btnSave.addEventListener("click", ()=> {
   personagem.push(product)
   console.log("array: ", personagem)
 });
+// script.js
+function criarCard() {
+  const inputNome = document.getElementById("input-nome");
+  const inputAnime = document.getElementById("input-anime");
+  const inputDescricao = document.getElementById("input-descricao");
+  const info = inputNome.value.trim();
+  const info1 = inputAnime.value.trim();
+  const info2 = inputDescricao.value.trim();
 
-btnList.addEventListener("click", ()=> {
-  console.log("input: " ,inputNome.value + ",",inputAnime.value +",", inputDescricao.value);
-  
-  // criando um novo objeto produto
-  const product = new product(inputNome.value,inputAnime.value, inputDescricao.value)
-  console.log("product obj: ",product);
-  // .push adicionar um novo elemento ao final do meu array
-  personagem.push(product)
-  console.log("array: ", personagem)
- );
+  if (info, info1, info2 === "") {
+    alert("Digite algo antes de adicionar!");
+    return;
+  }
+
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerText = info, info1, info2;
+
+  document.getElementById("conteiner-list").appendChild(card);
+
+  inputNome.value = ""; // Limpa o input
+  inputAnime.value = ""; // Limpa o input
+  inputDescricao.value = ""; // Limpa o input
+}
+criarCard();
 
 // quando não sabemos a quantidade de uls que vamos criar 
 // criamos a tag ul pelo javascript
